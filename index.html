@@ -1,0 +1,376 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>calmouya ♥ Sewing Workshop</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Concert+One&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="game">
+
+  <div class="topbar">
+    <span>🔴</span><span>🟡</span><span>🟢</span>
+    <span class="address">♡ my little sewing world ♡</span>
+    <span>✂️</span>
+  </div>
+
+  <div class="screen home-page active" id="home">
+    <div class="cloud cloud1">☁️</div>
+    <div class="cloud cloud2">☁️</div>
+    <div class="thread thread1"></div>
+    <div class="thread thread2"></div>
+
+    <div class="side-deco left-deco">🧵<br>🪡<br>🎀<br>🧶</div>
+    <div class="side-deco right-deco">🧸<br>🧷<br>🧵<br>✂️</div>
+
+    <div class="title-patch">
+      <span class="little-title">✿ carmourawr ✿</span>
+      <h1>WORKSHOP</h1>
+      <p>Sew Magical! Sew Cute! ♡</p>
+    </div>
+
+    <div class="balloon">♡<small>HAIR</small></div>
+
+    <div class="home-buttons">
+      <button class="start-button" data-page="collection">START</button>
+      <button class="doll-button" data-page="dolls">Doll<br>Collection</button>
+      <button class="extra-button" data-page="workshop">Sewing Room ✂</button>
+    </div>
+
+    <div class="ground">
+      <span>🌼</span><span>🐰</span><span>🌷</span>
+      <span>🦋</span><span>🍓</span><span>🌼</span>
+    </div>
+
+    <div class="home-note">૮₍ ˶ᵔ ᵕ ᵔ˶ ₎ა click to enter!</div>
+  </div>
+
+  <div class="screen inside-page" id="collection">
+    <button class="back-button" data-page="home">← HOME</button>
+    <div class="page-heading">
+      <span>✿ 01 — tiny rooms ✿</span>
+      <h2>Welcome, little tailor!</h2>
+      <p>plis pilih demi acu ♡</p>
+    </div>
+
+    <div class="activity-grid">
+      <button class="activity" data-page="dolls">
+        <span>🧸</span><b>DOLL HOUSE</b><small>home sweet dollhouse</small>
+      </button>
+      <button class="activity" data-page="workshop">
+        <span>🧵</span><b>SEWING ROOM</b><small>patches, stitches & sugar-sweet wishes</small>
+      </button>
+      <button class="activity" data-page="garden">
+        <span>🌷</span><b>BUTTON GARDEN</b><small>cobaa cari harta karun hayoo</small>
+      </button>
+      <button class="activity" data-page="diary">
+        <span>💌</span><b>SECRET DIARY</b><small>little notes for u love</small>
+      </button>
+    </div>
+    <div class="bottom-decoration">🪡 ♡ 🎀 ♡ 🧵 ♡ ✂️</div>
+  </div>
+
+  <div class="screen inside-page" id="dolls">
+    <button class="back-button" data-page="collection">← BACK</button>
+    <div class="page-heading">
+      <span>✿ 02 — DOLL COLLECTION ✿</span>
+      <h2>meet the cuties like calmouya!</h2>
+      <p>tap tap a doll to discover her lil secret.</p>
+    </div>
+
+    <div class="doll-grid">
+      <button class="doll" data-doll="Mellupi" data-secret="She collects tiny pink buttons and keeps them in a strawberry box!">
+        <span>🎀</span><b>Mellupi</b><small>♡ sweet dreamer ♡</small>
+      </button>
+      <button class="doll" data-doll="Berry" data-secret="Berry loves strawberry milk and dancing in the rain!">
+        <span>🍓</span><b>Berry</b><small>♡ berry baby ♡</small>
+      </button>
+      <button class="doll" data-doll="Puffie" data-secret="Puffie talks to clouds and gives names to every flower!">
+        <span>🐰</span><b>Puffie</b><small>♡ cloud keeper ♡</small>
+      </button>
+      <button class="doll" data-doll="Lulumi" data-secret="Lulumi makes tiny dresses for her stuffed animals!">
+        <span>🧸</span><b>Lulumi</b><small>♡ little maker ♡</small>
+      </button>
+    </div>
+
+    <div class="secret-card" id="dollSecret">
+      <span>🎁</span>
+      <p>choose your favorite doll!</p>
+    </div>
+  </div>
+
+  <div class="screen inside-page" id="workshop">
+    <button class="back-button" data-page="collection">← BACK</button>
+    <div class="page-heading">
+      <span>✿ 03 — MAGIC SEWING ROOM ✿</span>
+      <h2>sew what? let's get crafty!!</h2>
+      <p>choose fabric, add buttons, make it yours.</p>
+    </div>
+
+    <div class="craft-table">
+      <div class="fabric-preview" id="fabricPreview">🎀</div>
+      <h3 id="craftName">buatan nya uya imut</h3>
+      <p>pick ur favorite decoration!</p>
+      <div class="fabric-options">
+        <button data-fabric="🎀">🎀</button>
+        <button data-fabric="🌸">🌸</button>
+        <button data-fabric="🧸">🧸</button>
+        <button data-fabric="🍓">🍓</button>
+        <button data-fabric="🦋">🦋</button>
+        <button data-fabric="💗">💗</button>
+      </div>
+      <input id="craftInput" maxlength="24" placeholder="Name your creation...">
+      <button class="make-button" id="makeBtn">FINISH MY CRAFT ✨</button>
+      <p id="craftResult">ur cutecraft is waiting!</p>
+    </div>
+  </div>
+
+  <div class="screen inside-page" id="garden">
+    <button class="back-button" data-page="collection">← BACK</button>
+    <div class="page-heading">
+      <span>✿ 04 — BUTTON GARDEN ✿</span>
+      <h2>tiny treasure hunt!</h2>
+      <p>tap tap bunga!</p>
+    </div>
+    <div class="garden-field" id="gardenField">
+      <button class="flower" data-found="0">🌷</button>
+      <button class="flower" data-found="1">🌼</button>
+      <button class="flower" data-found="2">🌸</button>
+      <button class="flower" data-found="3">🌻</button>
+      <button class="flower" data-found="4">🌺</button>
+      <button class="flower" data-found="5">🌷</button>
+      <button class="flower" data-found="6">🌼</button>
+      <button class="flower" data-found="7">🌸</button>
+      <button class="flower" data-found="8">🌻</button>
+    </div>
+    <div class="score">♡ BUTTONS FOUND: <span id="score">0</span>/9 ♡</div>
+    <button class="make-button" id="resetGarden">GROW NEW GARDEN 🌱</button>
+  </div>
+
+  <div class="screen inside-page" id="diary">
+    <button class="back-button" data-page="collection">← BACK</button>
+    <div class="page-heading">
+      <span>✿ 05 — surat cinta ✿</span>
+      <h2>ur secret diary</h2>
+      <p>A little place to keep u thoughts ♡</p>
+    </div>
+    <div class="diary-paper">
+      <div class="diary-sticker">💌</div>
+      <h3>dear little dreamer,</h3>
+      <textarea id="diaryText" placeholder="Write your tiny dreams here..."></textarea>
+      <button class="make-button" id="saveDiary">FOLD MY LETTER ♡</button>
+      <p id="diaryResult">ur words deserve a little home.</p>
+    </div>
+  </div>
+
+  <footer>
+    <span>♡ HANDMADE WITH LOVE ♡</span>
+    <span id="clock">MAGIC TIME: 00:00</span>
+  </footer>
+</div>
+
+<div id="popup" class="popup">
+  <div class="popup-card">
+    <button id="closePopup" class="close-popup">✕</button>
+    <div id="popupEmoji">🎀</div>
+    <h2 id="popupTitle">a little surprise!</h2>
+    <p id="popupMessage">hello, cutie!</p>
+    <button id="popupOK" class="make-button">OKAY ♡</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+<section class="extra-workshop" id="extraWorkshop">
+
+  <div class="moving-ribbon">
+    🎀 ✂️ 🧵 SEW SOMETHING MAGICAL! 🧵 ✂️ 🎀
+    🎀 ✂️ 🧵 SEW SOMETHING MAGICAL! 🧵 ✂️ 🎀
+  </div>
+
+  <div class="extra-heading">
+    <span>✿ THE SECRET FLOOR ✿</span>
+    <h2>Little Things Factory!</h2>
+    <p>૮₍ ˶ᵔ ᵕ ᵔ˶ ₎ა everything is handmade ♡</p>
+  </div>
+
+  <div class="factory-window">
+    <div class="factory-sun">☀️</div>
+    <div class="factory-cloud">☁️</div>
+
+    <div class="factory-sign">♡ DOLL FACTORY ♡</div>
+
+    <div class="conveyor">
+      <div class="conveyor-track"></div>
+      <div class="conveyor-items" id="conveyorItems">
+        <button class="factory-doll" data-factory="A tiny teddy is waiting for a hug!">🧸</button>
+        <button class="factory-doll" data-factory="This bunny dreams about strawberry fields!">🐰</button>
+        <button class="factory-doll" data-factory="A little duck has joined the sewing club!">🐥</button>
+        <button class="factory-doll" data-factory="A sleepy bear wants a pink blanket!">🐻</button>
+        <button class="factory-doll" data-factory="A tiny teddy is waiting for a hug!">🧸</button>
+        <button class="factory-doll" data-factory="This bunny dreams about strawberry fields!">🐰</button>
+        <button class="factory-doll" data-factory="A little duck has joined the sewing club!">🐥</button>
+        <button class="factory-doll" data-factory="A sleepy bear wants a pink blanket!">🐻</button>
+      </div>
+    </div>
+
+    <div class="factory-floor">✿ ✿ ✿ ✿ ✿ ✿ ✿ ✿ ✿</div>
+  </div>
+
+  <div class="machine-area">
+    <div class="machine-decoration">🧶</div>
+    <div class="machine">
+      <div class="machine-top">SEWING MACHINE ♡</div>
+      <div class="machine-wheel">⚙️</div>
+      <div class="needle">🪡</div>
+      <div class="machine-bed">
+        <span id="sewingEmoji">🎀</span>
+      </div>
+      <div class="machine-buttons">
+        <button id="sewButton">SEW IT! ✨</button>
+        <button id="threadButton">CHANGE THREAD 🌈</button>
+      </div>
+      <p id="sewingMessage">Your little machine is ready!</p>
+    </div>
+    <div class="machine-decoration">🧵</div>
+  </div>
+
+  <div class="fabric-shop">
+    <div class="extra-heading">
+      <span>✿ FABRIC SHOP ✿</span>
+      <h2>pick pabrik cantiii!</h2>
+    </div>
+
+    <div class="fabric-wall">
+      <button class="fabric-swatch swatch-pink" data-swatch="#ffacd0">♡ PINK</button>
+      <button class="fabric-swatch swatch-yellow" data-swatch="#ffe68a">✿ LEMON</button>
+      <button class="fabric-swatch swatch-blue" data-swatch="#a7eaff">☁ SKY</button>
+      <button class="fabric-swatch swatch-purple" data-swatch="#d8baff">☆ LILAC</button>
+      <button class="fabric-swatch swatch-green" data-swatch="#b9ec9c">❀ MINT</button>
+      <button class="fabric-swatch swatch-red" data-swatch="#ff929c">♡ CHERRY</button>
+    </div>
+
+    <div class="fabric-preview-box" id="fabricBox">
+      <span id="fabricFlower">🌸</span>
+      <p id="fabricLabel">MY PRETTY FABRIC</p>
+    </div>
+
+    <p class="fabric-hint">tap a fabric to change the magic ✧</p>
+  </div>
+
+  <div class="wish-machine">
+    <span class="wish-star">⭐</span>
+    <span class="wish-heart">💗</span>
+    <h2>make a little wish!</h2>
+    <p>every doll deserves a tiny dream.</p>
+    <button id="wishButton">RECEIVE A WISH ♡</button>
+    <p id="wishResult">ur wish is hiding in a button...</p>
+  </div>
+
+  <div class="extra-ending">
+    <div class="ending-bows">🎀 🌷 🧸 🌸 🎀</div>
+    <h2>THE FACTORY IS FULL OF LOVE!</h2>
+    <p>made of little stitches & big dreams ♡</p>
+    <button id="backToFactory">BACK TO THE WORKSHOP ↑</button>
+  </div>
+
+<section class="dressup-world" id="dressupWorld">
+
+  <div class="du-marquee">
+    ♡ welcome to my little dollhouse ♡ ୨୧
+    welcome to my little dollhouse ♡ ୨୧
+  </div>
+
+  <header class="du-heading">
+    <span>୨୧ little sewing club ୨୧</span>
+    <h2>my tiny dress-up room</h2>
+    <p>pilih baju yang paling gemoy buat bonekamu ♡</p>
+    <div class="du-kaomoji">(˶ᵔ ᵕ ᵔ˶) ♡</div>
+  </header>
+
+  <div class="du-game">
+
+    <div class="du-status">
+      <span>♡ dolly no. 001</span>
+      <span id="duMood">mood: dreamy ☁️</span>
+    </div>
+
+    <div class="du-stage" id="duStage">
+      <div class="du-cloud cloud-left">☁️</div>
+      <div class="du-cloud cloud-right">☁️</div>
+      <div class="du-sparkle sparkle-one">✧</div>
+      <div class="du-sparkle sparkle-two">♡</div>
+      <div class="du-sparkle sparkle-three">✿</div>
+
+      <div class="du-doll" id="duDoll">
+        <div class="du-hair" id="duHair">🎀</div>
+        <div class="du-face">
+          <span class="du-eyes">•ᴗ•</span>
+          <span class="du-blush">˙ᵕ˙</span>
+        </div>
+        <div class="du-neck"></div>
+        <div class="du-body">
+          <div class="du-arms">♡</div>
+          <div class="du-dress" id="duDress">👗</div>
+          <div class="du-legs">〰️</div>
+        </div>
+        <div class="du-shoes" id="duShoes">👠</div>
+        <div class="du-accessory" id="duAccessory">👜</div>
+      </div>
+
+      <div class="du-stage-caption" id="duCaption">
+        your little dolly is waiting... ♡
+      </div>
+    </div>
+
+    <div class="du-controls">
+      <div class="du-tabs">
+        <button class="du-tab selected" data-category="hair">🎀 hair</button>
+        <button class="du-tab" data-category="dress">👗 dresses</button>
+        <button class="du-tab" data-category="shoes">👢 shoes</button>
+        <button class="du-tab" data-category="accessory">👜 extras</button>
+        <button class="du-tab" data-category="face">☺️ face</button>
+      </div>
+
+      <p class="du-instruction">tap an item to dress up your dolly ♡</p>
+
+      <div class="du-options" id="duOptions"></div>
+
+      <div class="du-palette">
+        <span>room color ♡</span>
+        <button data-room="#ffe0ed" style="background:#ffe0ed" aria-label="pink room"></button>
+        <button data-room="#d8f4ff" style="background:#d8f4ff" aria-label="blue room"></button>
+        <button data-room="#e5f7c9" style="background:#e5f7c9" aria-label="green room"></button>
+        <button data-room="#eadfff" style="background:#eadfff" aria-label="lilac room"></button>
+        <button data-room="#fff1b8" style="background:#fff1b8" aria-label="yellow room"></button>
+      </div>
+
+      <div class="du-actions">
+        <button id="duRandom">🎲 surprise me!</button>
+        <button id="duReset">↻ start over</button>
+        <button id="duFinish">♡ finish look</button>
+      </div>
+
+      <div class="du-result" id="duResult">
+        <span>୨୧</span>
+        <p>your outfit diary is still empty...</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="du-bottom-note">
+    <span>🧵</span>
+    <p>sewn with love, sprinkled with magic</p>
+    <span>🎀</span>
+  </div>
+
+</section>
+
+</section>
